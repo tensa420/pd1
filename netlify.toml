@@ -1,0 +1,3 @@
+# Статика лежит в site/ — иначе Netlify публикует корень репо без index.html
+[build]
+  publish = "site"
