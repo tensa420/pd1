@@ -1,0 +1,20 @@
+# OS
+Thumbs.db
+Desktop.ini
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs / env
+*.log
+.env
+.env.*
+
+# Dependencies (when added)
+node_modules/
+__pycache__/
+*.pyc
+.venv/

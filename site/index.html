@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семья в фокусе — Возрождаем традиции</title>
+    <style>
+        :root {
+            --primary: #4C63D8;
+            --accent: #FF6B6B;
+            --secondary: #43C9C9;
+            --light: #F8F9FE;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: var(--light);
+            color: #333;
+            line-height: 1.7;
+        }
+        nav {
+            background: var(--primary);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.8rem; font-weight: bold; color: white; }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+        .menu a:hover { color: var(--secondary); }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://psyfactor.org/lib/i/family9.jpg') center/cover;
+            color: white;
+            text-align: center;
+            padding: 220px 20px 120px;
+        }
+        h1 { font-size: 3.8rem; margin-bottom: 15px; }
+        .subtitle { font-size: 1.5rem; margin-bottom: 30px; }
+
+        section { padding: 90px 20px; max-width: 1200px; margin: 0 auto; }
+        .feature-section {
+            background: linear-gradient(135deg, rgba(67,201,201,0.1) 0%, rgba(76,99,216,0.1) 100%);
+            padding: 60px 40px !important;
+            margin: 60px auto !important;
+            border-radius: 20px;
+            max-width: 1200px !important;
+        }
+        h2 { text-align: center; font-size: 2.6rem; color: var(--primary); margin-bottom: 50px; }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+        }
+        .card.card-games {
+            background: url('https://storage.yandexcloud.net/incrussia-prod/wp-content/uploads/2020/04/Cover_Games.jpg') center/cover, white;
+        }
+        .card.card-books {
+            background: url('https://shkolamoskva.ru/wp-content/uploads/2023/10/photo_5853816485309428212_y.jpg') center/cover, white;
+        }
+        .card.card-recipes {
+            background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80') center/cover, white;
+        }
+        .card.card-family {
+            background: url('https://smartuniversity.susu.ru/media/k2/items/cache/839e7eb21f29f9046e9535f886295240_XL.jpg') center/cover, white;
+        }
+        .card.card-psychology {
+            background: url('https://4brain.ru/blog/wp-content/uploads/2021/10/psihologija-psevdonauka-ili-net.png') center/cover, white;
+        }
+        .card.card-events {
+            background: url('https://www.concert-star.ru/wp-content/uploads/2019/11/semeynie-prazdnikics-1024x675.jpg') center/cover, white;
+        }
+        .card img {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+        }
+        .card > div {
+            position: relative;
+            z-index: 2;
+            background: rgba(255,255,255,0.85);
+            border-radius: 0 0 15px 15px;
+        }
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        .card div { display: flex; flex-direction: column; flex: 1; }
+
+        footer {
+            background: #2C3E50;
+            color: #ddd;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .btn {
+            background: var(--accent);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--secondary); }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Семья в фокусе</div>
+            <div class="menu">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О проекте</a>
+                <a href="team.html">Участники</a>
+                <a href="blog.html">Журнал</a>
+                <a href="resources.html">Ресурсы</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Семья в фокусе</h1>
+        <p class="subtitle">Возрождаем тёплые семейные традиции вместе</p>
+        <a href="about.html" class="btn">Узнать о проекте</a>
+    </header>
+
+    <section class="feature-section">
+        <h2>Что мы делаем</h2>
+        <div class="cards">
+            <div class="card card-games">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Игры">
+                <div style="padding:25px;">
+                    <h3>🎮 Семейные игры</h3>
+                    <p>Компьютерные и настольные игры для всей семьи. Сплотим поколения и посмеемся вместе!</p>
+                </div>
+            </div>
+            <div class="card card-books">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" alt="Книги">
+                <div style="padding:25px;">
+                    <h3>📚 Книги и фильмы</h3>
+                    <p>Рекомендации для совместного просмотра и чтения. Истории, которые трогают сердце.</p>
+                </div>
+            </div>
+            <div class="card card-recipes">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Рецепты">
+                <div style="padding:25px;">
+                    <h3>🍽 Семейные рецепты</h3>
+                    <p>Готовим вместе — сохраняем традиции. От простых до праздничных блюд.</p>
+                </div>
+            </div>
+            <div class="card card-family">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Интервью">
+                <div style="padding:25px;">
+                    <h3>🎤 Истории семей</h3>
+                    <p>Интервью с семьями о их традициях, секретах единства и теплых моментах.</p>
+                </div>
+            </div>
+            <div class="card card-psychology">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Советы">
+                <div style="padding:25px;">
+                    <h3>💡 Советы психолога</h3>
+                    <p>Как наладить отношения и создать гармонию в семье с помощью экспертов.</p>
+                </div>
+            </div>
+            <div class="card card-events">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="События">
+                <div style="padding:25px;">
+                    <h3>🎉 Семейные события</h3>
+                    <p>Идеи для праздников, выходных и незабываемых совместных приключений.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Семья в фокусе. Возрождаем традиции вместе.</p>
+        <p><a href="https://vk.com/club233650687" style="color:var(--secondary); text-decoration:none; font-weight:500;">📱 Наша группа ВКонтакте</a></p>
+        <p style="margin-top:20px; font-size:0.9rem;">Контакт: family.in.focus@example.com</p>
+    </footer>
+</body>
+</html>

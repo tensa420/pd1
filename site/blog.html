@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Журнал — Семья в фокусе</title>
+    <style>
+        :root {
+            --primary: #4C63D8;
+            --accent: #FF6B6B;
+            --secondary: #43C9C9;
+            --light: #F8F9FE;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: var(--light);
+            color: #333;
+            line-height: 1.7;
+        }
+        nav {
+            background: var(--primary);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.8rem; font-weight: bold; color: white; }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+        .menu a:hover { color: var(--secondary); }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 220px 20px 120px;
+        }
+        h1 { font-size: 3.8rem; margin-bottom: 15px; }
+        .subtitle { font-size: 1.5rem; margin-bottom: 30px; }
+
+        section { padding: 90px 20px; max-width: 1200px; margin: 0 auto; }
+        h2 { text-align: center; font-size: 2.6rem; color: var(--primary); margin-bottom: 50px; }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        .card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.4rem; }
+        .card p { margin-bottom: 15px; font-size: 0.95rem; color: #555; }
+        .card small { color: var(--accent); font-weight: 500; }
+
+        footer {
+            background: #2C3E50;
+            color: #ddd;
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Семья в фокусе</div>
+            <div class="menu">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О проекте</a>
+                <a href="team.html">Участники</a>
+                <a href="blog.html">Журнал</a>
+                <a href="resources.html">Ресурсы</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Наш Журнал</h1>
+        <p class="subtitle">Истории о тепле, традициях и моментах, которые объединяют</p>
+    </header>
+
+    <section>
+        <h2>Свежие записи</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?auto=format&fit=crop&w=600&q=80" alt="Дэвид Бекхэм с дочерью">
+                <div class="card-content">
+                    <h3>🚕 История о «папе-таксисте»</h3>
+                    <p>Трогательный случай о том, как Дэвид Бекхэм прислушался к просьбе дочери Харпер и почему обычные поездки в школу ценнее любой славы.</p>
+                    <small>📅 2 мая 2026</small>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="Книги для всей семьи">
+                <div class="card-content">
+                    <h3>📚 Вечер с «Маленьким Николя»</h3>
+                    <p>Книга Рене Госсини как идеальный способ провести вечер. Короткие и смешные истории о школе и дружбе, которые понравятся и детям, и взрослым.</p>
+                    <small>📅 3 мая 2026</small>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80" alt="Кухонные приметы">
+                <div class="card-content">
+                    <h3>✨ Секреты нашей «кухонной магии»</h3>
+                    <p>От монетки под скатертью до сахара на рассыпанную соль. Почему семейные приметы и суеверия — это прежде всего про уют и память о близких.</p>
+                    <small>📅 3 мая 2026</small>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80" alt="Киновечер">
+                <div class="card-content">
+                    <h3>🏠 Вечера по-простоквашински</h3>
+                    <p>Обсуждаем новый фильм «Простоквашино» (2026). О том, что дом — это место, где тебя ждут, и где даже в споре побеждает любовь.</p>
+                    <small>📅 2 мая 2026</small>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Кухни мира">
+                <div class="card-content">
+                    <h3>🌍 Кулинарный гид от бабушек мира</h3>
+                    <p>От итальянской нонны до японской собо. Узнайте, зачем французские бабушки натирают багет чесноком и что такое правило «пяти цветов».</p>
+                    <small>📅 3 мая 2026</small>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://fruity-style.com/wa-data/public/shop/products/10/webp/data/public/photos/28/06/628/628.970.webp" alt="Семейный пикник">
+                <div class="card-content">
+                    <h3>🧺 Пикник: магия вне гаджетов</h3>
+                    <p>Почему обычный выезд за город с пледом и термосом объединяет поколения лучше любых праздников по сценарию. Счастье в пяти шагах от порога!</p>
+                    <small>📅 3 мая 2026</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Семья в фокусе. Мы верим в силу традиций.</p>
+    </footer>
+</body>
+</html>
