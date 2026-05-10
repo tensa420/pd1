@@ -1,0 +1,404 @@
+:root {
+    --primary: #4c63d8;
+    --accent: #ff6b6b;
+    --secondary: #43c9c9;
+    --light: #f8f9fe;
+    --footer-bg: #2c3e50;
+    --text: #333;
+    --text-muted: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* Навигация */
+nav {
+    background: var(--primary);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: var(--secondary);
+}
+
+/* Hero / шапка страниц */
+.site-header {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 220px 20px 120px;
+}
+
+.site-header.site-header--index {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url("https://psyfactor.org/lib/i/family9.jpg");
+}
+
+.site-header.site-header--about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url("https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=1920&q=80");
+}
+
+.site-header.site-header--blog {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1920&q=80");
+}
+
+.site-header.site-header--resources {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url("https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=1920&q=80");
+}
+
+.site-header h1 {
+    font-size: 3.8rem;
+    margin-bottom: 15px;
+}
+
+.site-header .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Секции */
+section {
+    padding: 90px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section.section--flush-top {
+    padding-top: 120px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: var(--primary);
+    margin-bottom: 50px;
+}
+
+.feature-section {
+    background: linear-gradient(135deg, rgba(67, 201, 201, 0.1) 0%, rgba(76, 99, 216, 0.1) 100%);
+    padding: 60px 40px !important;
+    margin: 60px auto !important;
+    border-radius: 20px;
+    max-width: 1200px !important;
+}
+
+/* Сетки карточек */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.page-team .cards {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.page-blog .cards {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.page-blog .card,
+.page-team .card {
+    height: auto;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Главная: тематические фоны блоков текста поверх карточек */
+.card.card-games,
+.card.card-books,
+.card.card-recipes,
+.card.card-family,
+.card.card-psychology,
+.card.card-events {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.card.card-games {
+    background-image: url("https://storage.yandexcloud.net/incrussia-prod/wp-content/uploads/2020/04/Cover_Games.jpg");
+}
+
+.card.card-books {
+    background-image: url("https://shkolamoskva.ru/wp-content/uploads/2023/10/photo_5853816485309428212_y.jpg");
+}
+
+.card.card-recipes {
+    background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80");
+}
+
+.card.card-family {
+    background-image: url("https://smartuniversity.susu.ru/media/k2/items/cache/839e7eb21f29f9046e9535f886295240_XL.jpg");
+}
+
+.card.card-psychology {
+    background-image: url("https://4brain.ru/blog/wp-content/uploads/2021/10/psihologija-psevdonauka-ili-net.png");
+}
+
+.card.card-events {
+    background-image: url("https://www.concert-star.ru/wp-content/uploads/2019/11/semeynie-prazdnikics-1024x675.jpg");
+}
+
+.feature-section .card > img {
+    display: none;
+}
+
+.feature-section .card > div {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 0 0 15px 15px;
+    flex: 1;
+    padding: 25px;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.team-intro {
+    background: linear-gradient(135deg, rgba(76, 99, 216, 0.1) 0%, rgba(67, 201, 201, 0.1) 100%);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.card p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.card small {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.about-content {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.08) 0%, rgba(67, 201, 201, 0.08) 100%);
+    padding: 50px 40px;
+    border-radius: 20px;
+    border-left: 5px solid var(--accent);
+}
+
+.about-content h3 {
+    color: var(--primary);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.about-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-card-text {
+    padding: 20px;
+}
+
+.about-card h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.about-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.resource-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--primary);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.resource-card > img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.resource-card-content {
+    padding: 25px;
+}
+
+.resource-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.resource-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.resource-card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.resource-card a:hover {
+    color: var(--secondary);
+}
+
+.btn {
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--secondary);
+}
+
+footer,
+.site-footer {
+    background: var(--footer-bg);
+    color: #ddd;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer a.footer-link-muted,
+.site-footer a.footer-link-muted {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer .footer-extra,
+.site-footer .footer-extra {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.page-resources footer {
+    margin-top: 50px;
+}
+
+.page-blog footer {
+    margin-top: 50px;
+}
+
+.page-about footer {
+    margin-top: 50px;
+}

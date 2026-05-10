@@ -4,105 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О проекте — Семья в фокусе</title>
-    <style>
-        :root {
-            --primary: #4C63D8;
-            --accent: #FF6B6B;
-            --secondary: #43C9C9;
-            --light: #F8F9FE;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-            background: var(--light);
-            color: #333;
-            line-height: 1.7;
-        }
-        nav {
-            background: var(--primary);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo { font-size: 1.8rem; font-weight: bold; color: white; }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: 500;
-        }
-        .menu a:hover { color: var(--secondary); }
-
-        header {
-            /* Обновлено фоновое фото на уютный семейный вечер */
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=1920&q=80') center/cover;
-            color: white;
-            text-align: center;
-            padding: 220px 20px 120px;
-        }
-        h1 { font-size: 3.8rem; margin-bottom: 15px; }
-        .subtitle { font-size: 1.5rem; margin-bottom: 30px; }
-
-        section { padding: 90px 20px; max-width: 1200px; margin: 0 auto; }
-        .about-content {
-            background: linear-gradient(135deg, rgba(255,107,107,0.08) 0%, rgba(67,201,201,0.08) 100%);
-            padding: 50px 40px;
-            border-radius: 20px;
-            border-left: 5px solid var(--accent);
-        }
-        .about-content h3 {
-            color: var(--primary);
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-        .about-card {
-            background: white;
-            padding: 0; /* Убрал внутренний отступ, чтобы картинка была в край */
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            text-align: center;
-            overflow: hidden;
-        }
-        .about-card-text {
-            padding: 20px;
-        }
-        .about-card h4 {
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-        .about-card p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-        h2 { text-align: center; font-size: 2.6rem; color: var(--primary); margin-bottom: 50px; }
-
-        footer {
-            background: #2C3E50;
-            color: #ddd;
-            text-align: center;
-            padding: 50px 20px;
-            margin-top: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-about">
     <nav>
         <div class="nav-container">
             <div class="logo">Семья в фокусе</div>
@@ -116,7 +20,7 @@
         </div>
     </nav>
 
-    <header>
+    <header class="site-header site-header--about">
         <h1>О проекте</h1>
         <p class="subtitle">Вдохновляем на создание счастливых моментов вместе</p>
     </header>
@@ -127,10 +31,10 @@
             <p style="font-size:1.2rem; line-height:1.8; text-align:center;">
                 В современном мире семейные традиции постепенно исчезают под натиском суетливых дел и цифровых экранов. Мы создали проект «Семья в фокусе», чтобы вернуть в дома тепло, единство, общие ценности и настоящие эмоции.
             </p>
-            
+
             <h3>🎯 Наша миссия</h3>
             <p>Помочь каждой семье найти свой путь к укреплению связей, созданию памяти о совместных моментах и передаче любимых традиций следующему поколению.</p>
-            
+
             <h3>📋 Что мы публикуем</h3>
             <ul style="margin:20px 0 30px 30px; font-size:1.05rem;">
                 <li>🎮 Рекомендации лучших семейных компьютерных и настольных игр</li>
@@ -139,12 +43,12 @@
                 <li>🍽 Простые, вкусные и душевные семейные рецепты</li>
                 <li>💡 Советы психологов по укреплению семейных отношений</li>
             </ul>
-            
+
             <p style="text-align:center; font-style:italic; font-size:1.15rem; color: var(--accent); margin-top:30px;">
                 ✨ Наша цель — чтобы каждый вечер за столом звучал смех, слышались тёплые разговоры и рождались новые семейные легенды.
             </p>
         </div>
-        
+
         <div class="about-grid">
             <div class="about-card">
                 <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=600&q=80" alt="Большая счастливая семья" style="width:100%;height:200px;object-fit:cover;">
@@ -172,8 +76,9 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Семья в фокусе. Каждое мгновение важно.</p>
+    <footer class="site-footer">
+        <p>&copy; <span id="footer-year"></span> Семья в фокусе. Каждое мгновение важно.</p>
     </footer>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

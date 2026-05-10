@@ -4,102 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ресурсы — Семья в фокусе</title>
-    <style>
-        :root {
-            --primary: #4C63D8;
-            --accent: #FF6B6B;
-            --secondary: #43C9C9;
-            --light: #F8F9FE;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-            background: var(--light);
-            color: #333;
-            line-height: 1.7;
-        }
-        nav {
-            background: var(--primary);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo { font-size: 1.8rem; font-weight: bold; color: white; }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: 500;
-        }
-        .menu a:hover { color: var(--secondary); }
-
-        header {
-            /* Обновлено: Атмосферное фото семейного пути/прогулки */
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=1920&q=80') center/cover;
-            color: white;
-            text-align: center;
-            padding: 220px 20px 120px;
-        }
-        h1 { font-size: 3.8rem; margin-bottom: 15px; }
-        .subtitle { font-size: 1.5rem; margin-bottom: 30px; }
-
-        section { padding: 90px 20px; max-width: 1200px; margin: 0 auto; }
-        h2 { text-align: center; font-size: 2.6rem; color: var(--primary); margin-bottom: 50px; }
-
-        .resource-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-        .resource-card {
-            background: white;
-            padding: 0; /* Убрано для плотного прилегания фото */
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-top: 4px solid var(--primary);
-            transition: 0.3s;
-            overflow: hidden;
-        }
-        .resource-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-        .resource-card-content {
-            padding: 25px;
-        }
-        .resource-card h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-        .resource-card p {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-        .resource-card a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: 0.3s;
-        }
-        .resource-card a:hover {
-            color: var(--secondary);
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-resources">
     <nav>
         <div class="nav-container">
             <div class="logo">Семья в фокусе</div>
@@ -113,7 +20,7 @@
         </div>
     </nav>
 
-    <header>
+    <header class="site-header site-header--resources">
         <h1>Ресурсы</h1>
         <p class="subtitle">Всё необходимое для укрепления ваших семейных уз</p>
     </header>
@@ -122,7 +29,7 @@
         <h2>Полезные ресурсы и материалы</h2>
         <div class="resource-grid">
             <div class="resource-card">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Люди общаются" style="width:100%;height:180px;object-fit:cover;">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Люди общаются">
                 <div class="resource-card-content">
                     <h3>📱 Социальные сети</h3>
                     <p>Следите за нами в социальных сетях, где мы ежедневно делимся советами и историями семей.</p>
@@ -131,7 +38,7 @@
             </div>
 
             <div class="resource-card">
-                <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=600&q=80" alt="Поддержка и психология" style="width:100%;height:180px;object-fit:cover;">
+                <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=600&q=80" alt="Поддержка и психология">
                 <div class="resource-card-content">
                     <h3>👨‍⚕️ Семейная психология</h3>
                     <p>Статьи и рекомендации от профессиональных психологов о том, как укрепить отношения в семье.</p>
@@ -141,7 +48,7 @@
             </div>
 
             <div class="resource-card">
-                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80" alt="Семейная кухня" style="width:100%;height:180px;object-fit:cover;">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80" alt="Семейная кухня">
                 <div class="resource-card-content">
                     <h3>🍽 Рецепты и готовка</h3>
                     <p>Коллекция семейных рецептов от простых будничных блюд до праздничных шедевров.</p>
@@ -151,7 +58,7 @@
             </div>
 
             <div class="resource-card">
-                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="Книги для чтения" style="width:100%;height:180px;object-fit:cover;">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="Книги для чтения">
                 <div class="resource-card-content">
                     <h3>📚 Книги для семьи</h3>
                     <p>Тщательно подобранный список книг для совместного чтения всеми поколениями семьи.</p>
@@ -161,7 +68,7 @@
             </div>
 
             <div class="resource-card">
-                <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/90/2022/10/13140139/luchshie-filmy-i-serialy-o-hakerah-featured.jpg" alt="Просмотр кино" style="width:100%;height:180px;object-fit:cover;">
+                <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/90/2022/10/13140139/luchshie-filmy-i-serialy-o-hakerah-featured.jpg" alt="Просмотр кино">
                 <div class="resource-card-content">
                     <h3>🎬 Фильмы и сериалы</h3>
                     <p>Подборка фильмов и сериалов, которые идеально подходят для семейного просмотра.</p>
@@ -171,7 +78,7 @@
             </div>
 
             <div class="resource-card">
-                <img src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=600&q=80" alt="Настольные игры" style="width:100%;height:180px;object-fit:cover;">
+                <img src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=600&q=80" alt="Настольные игры">
                 <div class="resource-card-content">
                     <h3>🎮 Настольные и видео игры</h3>
                     <p>Рейтинговые игры, которые подарят веселье и сплотят всю семью за одним столом или экраном.</p>
@@ -182,8 +89,9 @@
         </div>
     </section>
 
-    <footer style="margin-top: 50px;">
-        <p>&copy; 2026 Семья в фокусе. Каждый ресурс важен.</p>
+    <footer class="site-footer">
+        <p>&copy; <span id="footer-year"></span> Семья в фокусе. Каждый ресурс важен.</p>
     </footer>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
